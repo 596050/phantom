@@ -1,0 +1,39 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100, 100, 100, 0.5);
+  overflow: hidden;
+}
+
+.modal-content {
+  background-color: black;
+  margin: 20% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 6px;
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -10px;
+}
+
+.close:hover,
+.close:focus {
+  color: rgba(255, 255, 255, 0.18);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close:active {
+  color: rgba(255, 255, 255, 0.38);
+}

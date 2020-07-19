@@ -1,0 +1,21 @@
+@media only screen and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav-container {
+    flex-direction: column;
+    justify-content: center;
+    font-size: x-small;
+    position: relative;
+  }
+  .wrapper {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .modal-content {
+    margin: 30% auto !important;
+  }
+  .modal {
+    overflow: auto;
+  }
+  .list-item-bookmarkName {
+    width: 80%;
+  }
+}

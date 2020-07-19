@@ -1,0 +1,50 @@
+.nav-logo {
+  animation: 4s multicolor ease-in-out infinite;
+}
+
+.logo-shadow {
+  filter: drop-shadow(2px 2px 2px rgba(255, 255, 255));
+}
+
+@keyframes multicolor {
+  0% {
+    opacity: 75%;
+    filter: drop-shadow(5px -5px 5px rgb(232, 117, 255));
+  }
+  20% {
+    opacity: 100%;
+    filter: drop-shadow(5px -5px 5px rgb(255, 218, 117));
+  }
+  40% {
+    opacity: 100%;
+    filter: drop-shadow(5px -5px 5px rgb(117, 161, 255));
+  }
+  60% {
+    opacity: 100%;
+    filter: drop-shadow(5px -4px 5px rgb(156, 255, 117));
+  }
+  80% {
+    opacity: 100%;
+    filter: drop-shadow(5px -3px 5px rgb(239, 117, 255));
+  }
+  100% {
+    opacity: 75%;
+    filter: drop-shadow(5px -2px 5px rgb(178, 255, 34));
+  }
+  80% {
+    opacity: 100%;
+    filter: drop-shadow(5px -1px 5px rgb(255, 253, 117));
+  }
+  60% {
+    opacity: 100%;
+    filter: drop-shadow(5px -2px 5px rgb(156, 255, 117));
+  }
+  40% {
+    opacity: 100%;
+    filter: drop-shadow(5px -3px 5px rgb(117, 161, 255));
+  }
+}
+
+.nav-logo:hover {
+  animation: initial;
+}
