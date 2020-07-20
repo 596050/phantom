@@ -44,19 +44,27 @@ const listItemDropdownString = (item) => `
 </div>
 </div>`;
 
-const isValidURL = async (str) => {
-  // make request to check if url is valid
-  return await fetch(str, {
-    redirect: "follow",
-    mode: "no-cors",
-  })
-    .then(() => {
-      return true;
-    })
-    .catch((err) => {
-      console.log("err", err);
-      return false;
-    });
+const isValidURL = (str) => {
+  const url = new RegExp(
+    "https?://(www.)?[-a-zA-Z0-9@:%._+~#=]{1,256}.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)"
+  );
+
+  if (url.test(str)) {
+    return true;
+  }
+  return false;
+  // // make request to check if url is valid
+  // return await fetch(str, {
+  //   redirect: "follow",
+  //   mode: "no-cors",
+  // })
+  //   .then(() => {
+  //     return true;
+  //   })
+  //   .catch((err) => {
+  //     console.log("err", err);
+  //     return false;
+  //   });
 };
 
 window.addEventListener("load", function () {
@@ -334,7 +342,7 @@ window.addEventListener("load", function () {
     document.getElementById("bookmarks-body").style.overflow = "auto";
   }
 
-  async function addData(e) {
+  function addData(e) {
     // prevent default - we don't want the form to submit in the conventional way
     e.preventDefault();
 
@@ -350,7 +358,7 @@ window.addEventListener("load", function () {
       bookmarkNameValue == null ||
       bookmarkURLValue == undefined ||
       bookmarkNameValue == undefined ||
-      !(await isValidURL(bookmarkURLValue))
+      !isValidURL(bookmarkURLValue)
     ) {
       console.log("Data not submitted — form incomplete.");
       return;

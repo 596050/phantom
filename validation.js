@@ -5,18 +5,14 @@ bookmarkName.addEventListener("input", function () {
   }
 });
 
-bookmarkURL.addEventListener("input", async function () {
+bookmarkURL.addEventListener("input", function () {
   console.log(
-    !(await isValidURL(
-      (bookmarkURL.value || "").replace(window.location.href, "")
-    )),
+    !isValidURL((bookmarkURL.value || "").replace(window.location.href, "")),
     (bookmarkURL.value || "").replace(window.location.href, "")
   );
   if (
     bookmarkURL.value === "" ||
-    !(await isValidURL(
-      (bookmarkURL.value || "").replace(window.location.href, "")
-    ))
+    !isValidURL((bookmarkURL.value || "").replace(window.location.href, ""))
   ) {
     bookmarkURL.setCustomValidity("Please provide a valid URL");
   } else {
@@ -31,11 +27,8 @@ updateBookmarkName.addEventListener("input", function () {
   }
 });
 
-updateBookmarkURL.addEventListener("input", async function () {
-  if (
-    updateBookmarkURL.value === "" ||
-    !(await isValidURL(updateBookmarkURL.value))
-  ) {
+updateBookmarkURL.addEventListener("input", function () {
+  if (updateBookmarkURL.value === "" || !isValidURL(updateBookmarkURL.value)) {
     updateBookmarkURL.setCustomValidity("Please provide a valid URL");
   } else {
     updateBookmarkURL.setCustomValidity("");
