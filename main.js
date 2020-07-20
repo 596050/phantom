@@ -51,18 +51,6 @@ const isValidURL = (str) => {
     return true;
   }
   return false;
-  // // make request to check if url is valid
-  // return await fetch(str, {
-  //   redirect: "follow",
-  //   mode: "no-cors",
-  // })
-  //   .then(() => {
-  //     return true;
-  //   })
-  //   .catch((err) => {
-  //     console.log("err", err);
-  //     return false;
-  //   });
 };
 
 window.addEventListener("load", function () {

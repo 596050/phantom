@@ -15,4 +15,3 @@ limitations:
 - Needs to be tested with other browsers
 - Has not been tested with large numbers of bookmarks and does not have search functionality, does not scale
 - No unit or integration testing
-- Immediately makes a fetch call on input
